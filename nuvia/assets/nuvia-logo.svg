@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="nuvia-title">
+  <title id="nuvia-title">Nuvia</title>
+  <defs>
+    <linearGradient id="nuvia-bg" x1="22" y1="15" x2="237" y2="245" gradientUnits="userSpaceOnUse"><stop stop-color="#003E43"/><stop offset="1" stop-color="#00565A"/></linearGradient>
+    <linearGradient id="nuvia-coral" x1="88" y1="104" x2="157" y2="189" gradientUnits="userSpaceOnUse"><stop stop-color="#FF765B"/><stop offset="1" stop-color="#FF4F3D"/></linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="54" fill="url(#nuvia-bg)"/>
+  <path d="M63 187V99c0-28 22-50 50-50 16 0 31 8 41 21l56 76V83" fill="none" stroke="#FBFCF9" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M93 187v-69c0-11 12-17 21-11l25 19c12 9 18 22 18 37v24" fill="none" stroke="url(#nuvia-coral)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="120" cy="162" r="7.5" fill="#FF5B45"/>
+</svg>

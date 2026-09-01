@@ -1,0 +1,17 @@
+/* Higher contrast for the interactive calculator section. */
+.impact {
+  background: linear-gradient(135deg, #c7f5ea 0%, #e9fffa 100%);
+  color: #06292d;
+}
+
+.impact::before {
+  background: rgba(0, 61, 65, .06);
+}
+
+.impact h2 mark {
+  color: #003d41;
+}
+
+.impact-copy > p:not(.tag) {
+  color: #244c50;
+}

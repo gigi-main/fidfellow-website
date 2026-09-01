@@ -1,0 +1,4 @@
+const menuToggle=document.querySelector('.menu-toggle');
+const siteNav=document.querySelector('.site-nav');
+menuToggle?.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')==='true';menuToggle.setAttribute('aria-expanded',String(!open));menuToggle.classList.toggle('is-open',!open);siteNav?.classList.toggle('is-open',!open)});
+siteNav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',event=>{const fallback={"#prodotto":'.product-area',"#calcolo":'.impact'}[link.getAttribute('href')];if(fallback&&!document.querySelector(link.getAttribute('href'))){event.preventDefault();document.querySelector(fallback)?.scrollIntoView({behavior:'smooth'})}menuToggle?.setAttribute('aria-expanded','false');menuToggle?.classList.remove('is-open');siteNav.classList.remove('is-open')}));
