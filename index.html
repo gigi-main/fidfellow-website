@@ -7,7 +7,7 @@
   <meta name="description" content="FidFellow sviluppa prodotti digitali proprietari e realizza automazioni AI e digitalizzazione dei processi per le aziende.">
   <meta name="theme-color" content="#070809">
   <link rel="icon" href="assets/fidfellow-mark.webp">
-  <link rel="stylesheet" href="style.css?v=20260902-3">
+  <link rel="stylesheet" href="style.css?v=20260902-4">
 </head>
 <body>
 <header>
@@ -59,13 +59,14 @@
   </section>
 
   <section id="risultati" class="results" data-mobile-page="risultati">
-    <div class="results-heading"><p class="section-label">PROIEZIONI</p><h2>Revenue e traction.<br>Scenario a 12 mesi.</h2><p>Intervalli-obiettivo elaborati per rappresentare uno scenario di crescita sostenibile dei tre prodotti.</p></div>
-    <div class="results-grid">
-      <article class="result-card"><div class="result-brand"><img src="assets/nuvia-logo.webp" alt=""><div><span>NUVIA</span><small>ORIZZONTE 12 MESI</small></div></div><div class="metric"><span>REVENUE STIMATA</span><strong>€40–70K ARR</strong></div><div class="chart chart-projection chart-nuvia" role="img" aria-label="Proiezione revenue Nuvia a 12 mesi: tra 40 e 70 mila euro ARR"><i></i><i></i><i></i><i></i><i></i><b>12 MESI</b></div><div class="metric metric-traction"><span>TRACTION PREVISTA</span><strong>25–40 strutture</strong></div></article>
-      <article class="result-card"><div class="result-brand"><img src="assets/flusso-logo.svg" alt=""><div><span>FLUSSO</span><small>ORIZZONTE 12 MESI</small></div></div><div class="metric"><span>REVENUE STIMATA</span><strong>€60–100K ARR</strong></div><div class="chart chart-projection chart-flusso" role="img" aria-label="Proiezione revenue Flusso a 12 mesi: tra 60 e 100 mila euro ARR"><i></i><i></i><i></i><i></i><i></i><b>12 MESI</b></div><div class="metric metric-traction"><span>TRACTION PREVISTA</span><strong>10–18 strutture</strong></div></article>
-      <article class="result-card"><div class="result-brand"><img src="assets/hotey-logo.svg" alt=""><div><span>HOTEY</span><small>ORIZZONTE 12 MESI</small></div></div><div class="metric"><span>REVENUE STIMATA</span><strong>€80–140K ARR</strong></div><div class="chart chart-projection chart-hotey" role="img" aria-label="Proiezione revenue Hotey a 12 mesi: tra 80 e 140 mila euro ARR"><i></i><i></i><i></i><i></i><i></i><b>12 MESI</b></div><div class="metric metric-traction"><span>TRACTION PREVISTA</span><strong>40–70 hotel</strong></div></article>
+    <div class="results-heading"><p class="section-label">SIMULATORE DI CRESCITA</p><h2>Strutture attive.<br>Revenue annuale.</h2><p>Seleziona un prodotto e modifica il numero di strutture per visualizzare uno scenario annuale dinamico.</p></div>
+    <div class="growth-simulator">
+      <div class="sim-products" role="tablist" aria-label="Prodotto da simulare"><button class="active" type="button" data-sim-product="Nuvia" data-rate="1800" data-unit="strutture" data-default="30">Nuvia</button><button type="button" data-sim-product="Flusso" data-rate="6000" data-unit="strutture" data-default="14">Flusso</button><button type="button" data-sim-product="Hotey" data-rate="2400" data-unit="hotel" data-default="50">Hotey</button></div>
+      <div class="sim-summary"><div><span>STRUTTURE ATTIVE</span><strong id="sim-count">30</strong><small id="sim-unit">strutture</small></div><div><span>REVENUE ANNUALE</span><strong id="sim-revenue">€54.000</strong><small>ARR stimato</small></div><div><span>RICAVO MEDIO</span><strong id="sim-rate">€1.800</strong><small>per struttura / anno</small></div></div>
+      <div class="sim-chart"><svg viewBox="0 0 800 320" role="img" aria-labelledby="sim-chart-title"><title id="sim-chart-title">Grafico dinamico della revenue annuale stimata</title><defs><linearGradient id="revenue-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d5ad60" stop-opacity=".5"/><stop offset="1" stop-color="#d5ad60" stop-opacity=".03"/></linearGradient></defs><g class="sim-grid"><line x1="60" y1="60" x2="780" y2="60"/><line x1="60" y1="115" x2="780" y2="115"/><line x1="60" y1="170" x2="780" y2="170"/><line x1="60" y1="225" x2="780" y2="225"/><line x1="60" y1="280" x2="780" y2="280"/></g><path id="sim-area" class="sim-area" d="M60 280 L780 214 L780 280 Z"/><path id="sim-line" class="sim-line" d="M60 280 L780 214"/><circle id="sim-point" class="sim-point" cx="780" cy="214" r="6"/><text x="60" y="305">€0</text><text id="sim-axis-max" x="780" y="305" text-anchor="end">€180K</text></svg></div>
+      <div class="sim-control"><div><label for="structure-slider">Numero di strutture</label><output id="slider-output" for="structure-slider">30</output></div><input id="structure-slider" type="range" min="1" max="100" value="30" step="1"></div>
     </div>
-    <p class="results-note">Proiezioni indicative a 12 mesi · Non rappresentano risultati già conseguiti · Aggiornamento settembre 2026.</p>
+    <p class="results-note">Scenario indicativo basato su un ricavo medio annuo ipotizzato per struttura. Non rappresenta risultati già conseguiti.</p>
   </section>
 
   <section id="contatti" class="contact" data-mobile-page="contatti">
@@ -75,6 +76,6 @@
 </main>
 
 <footer><div class="footer-logo"><img src="assets/fidfellow-mark.webp" alt=""><img src="assets/fidfellow-wordmark.webp" alt="FidFellow"></div><div><a href="#home">Torna su ↑</a><span>© 2026 FidFellow</span></div></footer>
-<script src="script.js?v=20260902-3"></script>
+<script src="script.js?v=20260902-4"></script>
 </body>
 </html>

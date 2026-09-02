@@ -49,6 +49,40 @@ document.querySelectorAll('[data-product-target]').forEach(button=>button.addEve
   });
 }));
 
+const structureSlider=document.querySelector('#structure-slider');
+const simButtons=[...document.querySelectorAll('[data-sim-product]')];
+const euro=value=>new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(value);
+let activeSimulation=simButtons[0];
+
+const updateSimulation=()=>{
+  if(!structureSlider||!activeSimulation)return;
+  const count=Number(structureSlider.value);
+  const rate=Number(activeSimulation.dataset.rate);
+  const revenue=count*rate;
+  const maxRevenue=100*rate;
+  const endY=280-(revenue/maxRevenue)*220;
+  const points=[0,.25,.5,.75,1].map((fraction,index)=>`${60+(720*fraction)} ${280-((revenue*fraction)/maxRevenue)*220}`);
+  const linePath=`M${points.join(' L')}`;
+  document.querySelector('#sim-count').textContent=count;
+  document.querySelector('#sim-unit').textContent=activeSimulation.dataset.unit;
+  document.querySelector('#sim-revenue').textContent=euro(revenue);
+  document.querySelector('#sim-rate').textContent=euro(rate);
+  document.querySelector('#slider-output').textContent=count;
+  document.querySelector('#sim-axis-max').textContent=`€${Math.round(maxRevenue/1000)}K`;
+  document.querySelector('#sim-line').setAttribute('d',linePath);
+  document.querySelector('#sim-area').setAttribute('d',`${linePath} L780 280 L60 280 Z`);
+  document.querySelector('#sim-point').setAttribute('cy',endY);
+  structureSlider.style.setProperty('--range-progress',`${count}%`);
+};
+
+simButtons.forEach(button=>button.addEventListener('click',()=>{
+  activeSimulation=button;
+  simButtons.forEach(item=>item.classList.toggle('active',item===button));
+  structureSlider.value=button.dataset.default;
+  updateSimulation();
+}));
+if(structureSlider){structureSlider.addEventListener('input',updateSimulation);updateSimulation()}
+
 window.addEventListener('popstate',()=>showPage(pageFromHash(),false));
 document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
 showPage(pageFromHash(),false);
