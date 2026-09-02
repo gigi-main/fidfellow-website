@@ -39,6 +39,16 @@ document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('c
   showPage(target.dataset.mobilePage||target.id||'home');
 }));
 
+document.querySelectorAll('[data-product-target]').forEach(button=>button.addEventListener('click',()=>{
+  const selected=button.dataset.productTarget;
+  document.querySelectorAll('[data-product]').forEach(card=>card.classList.toggle('product-active',card.dataset.product===selected));
+  document.querySelectorAll('[data-product-target]').forEach(tab=>{
+    const active=tab===button;
+    tab.classList.toggle('active',active);
+    tab.setAttribute('aria-selected',String(active));
+  });
+}));
+
 window.addEventListener('popstate',()=>showPage(pageFromHash(),false));
 document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
 showPage(pageFromHash(),false);

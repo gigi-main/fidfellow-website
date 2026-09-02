@@ -21,7 +21,7 @@
 <main>
   <section id="home" class="hero page-active" data-mobile-page="home">
     <div class="hero-logo"><img src="assets/fidfellow-mark.webp" alt="Simbolo FidFellow"><img src="assets/fidfellow-wordmark.webp" alt="FidFellow"><p>BUILDING DIGITAL VENTURES</p></div>
-    <div class="hero-content"><p class="section-label">VENTURE STUDIO & AI OPERATIONS</p><h1>Costruiamo aziende digitali.<br><span>Automatizziamo processi reali.</span></h1><p>FidFellow crea prodotti proprietari partendo da opportunità individuate internamente. Per le imprese realizza automazioni AI e sistemi di digitalizzazione operativa.</p><div class="hero-actions"><a class="button gold" href="#prodotti">Scopri i prodotti</a><a class="button outline" href="#contatti">Parlaci di un processo</a></div></div>
+    <div class="hero-content"><p class="section-label">VENTURE STUDIO & AI OPERATIONS</p><h1>Costruiamo aziende digitali.<br><span>Automatizziamo processi reali.</span></h1><p>FidFellow crea prodotti proprietari partendo da opportunità individuate internamente. Per le imprese realizza automazioni AI e sistemi di digitalizzazione operativa.</p><div class="hero-actions"><a class="button gold" href="#prodotti">Scopri i prodotti</a><a class="button outline" href="#contatti">Parlaci di un processo</a></div><div class="hero-services"><span>Prodotti proprietari</span><span>Automazioni AI</span><span>Processi digitali</span></div></div>
   </section>
 
   <section class="activities page-active" data-mobile-page="home" aria-label="Le attività di FidFellow">
@@ -43,15 +43,16 @@
 
   <section id="prodotti" class="products" data-mobile-page="prodotti">
     <div class="products-heading"><p class="section-label">I NOSTRI PRODOTTI</p><h2>La prova di ciò che costruiamo.</h2><p>Presentiamo soltanto progetti reali e informazioni che possiamo confermare.</p></div>
-    <article class="product-card">
+    <div class="product-switcher" role="tablist" aria-label="Seleziona un prodotto"><button class="active" type="button" role="tab" aria-selected="true" data-product-target="nuvia">Nuvia</button><button type="button" role="tab" aria-selected="false" data-product-target="flusso">Flusso</button><button type="button" role="tab" aria-selected="false" data-product-target="hotey">Hotey</button></div>
+    <article class="product-card product-active" data-product="nuvia">
       <div class="product-logo"><img src="assets/nuvia-logo.webp" alt="Logo Nuvia"></div>
       <div class="product-info"><div class="product-top"><span>NUVIA / VENTURE 01</span><strong><i></i> IN SVILUPPO</strong></div><h3>Nuvia</h3><p>Nuvia è la piattaforma proprietaria FidFellow dedicata all’ospitalità indipendente. Aiuta hotel, B&B e case vacanza a gestire richieste ripetitive, organizzare la giornata operativa e avere una visione più chiara della struttura.</p><dl><div><dt>Origine</dt><dd>Progetto interno</dd></div><div><dt>Proprietà</dt><dd>FidFellow</dd></div><div><dt>Settore</dt><dd>Hospitality</dd></div><div><dt>Destinatari</dt><dd>Hotel, B&B e case vacanza</dd></div><div><dt>Stato</dt><dd>Sviluppo in corso</dd></div></dl><a class="product-website" href="nuvia/">Visita il sito Nuvia <span>↗</span></a></div>
     </article>
-    <article class="product-card product-card-flusso">
+    <article class="product-card product-card-flusso" data-product="flusso">
       <div class="product-logo product-logo-flusso"><img src="assets/flusso-logo.svg" alt="Logo Flusso"></div>
       <div class="product-info"><div class="product-top"><span>FLUSSO / VENTURE 02</span><strong class="status-online"><i></i> ONLINE</strong></div><h3>Flusso</h3><p>Software di supporto all’appropriatezza per le strutture complesse di Cardiologia. Aiuta a valutare la richiesta clinica e a orientare priorità e percorso, senza sostituire il medico o il CUP.</p><dl><div><dt>Origine</dt><dd>Progetto interno</dd></div><div><dt>Proprietà</dt><dd>FidFellow</dd></div><div><dt>Settore</dt><dd>Healthcare / Cardiologia</dd></div><div><dt>Destinatari</dt><dd>Strutture complesse di Cardiologia</dd></div><div><dt>Stato</dt><dd>Online</dd></div></dl><a class="product-website" href="https://flusso-desk.vercel.app/" target="_blank" rel="noopener noreferrer">Visita il sito Flusso <span>↗</span></a></div>
     </article>
-    <article class="product-card product-card-hotey">
+    <article class="product-card product-card-hotey" data-product="hotey">
       <div class="product-logo product-logo-hotey"><img src="assets/hotey-logo.svg" alt="Logo Hotey"></div>
       <div class="product-info"><div class="product-top"><span>HOTEY / VENTURE 03</span><strong class="status-online"><i></i> ONLINE</strong></div><h3>Hotey</h3><p>Motore di revenue recovery per hotel. Confronta prenotazioni, commissioni OTA e pagamenti per individuare anomalie e importi potenzialmente recuperabili, sempre da verificare.</p><dl><div><dt>Origine</dt><dd>Progetto interno</dd></div><div><dt>Proprietà</dt><dd>FidFellow</dd></div><div><dt>Settore</dt><dd>Hospitality / Revenue operations</dd></div><div><dt>Destinatari</dt><dd>Hotel indipendenti</dd></div><div><dt>Stato</dt><dd>Online</dd></div></dl><a class="product-website" href="https://hotey0.vercel.app/" target="_blank" rel="noopener noreferrer">Visita il sito Hotey <span>↗</span></a></div>
     </article>
