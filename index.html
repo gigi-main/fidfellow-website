@@ -16,20 +16,27 @@
   <meta name="theme-color" content="#070809">
   <link rel="icon" href="assets/fidfellow-mark.webp">
   <link rel="stylesheet" href="style.css?v=20260902-5">
+  <link rel="stylesheet" href="cinematic.css?v=20260908-1">
 </head>
 <body>
+<a class="skip-link" href="#chi-siamo">Vai al contenuto</a>
 <header>
   <a class="header-logo" href="#home" aria-label="FidFellow — home"><img src="assets/fidfellow-wordmark.webp" alt="FidFellow"></a>
   <nav aria-label="Navigazione principale"><a href="#home">Home</a><a href="#chi-siamo">Chi siamo</a><a href="#metodo">Metodo</a><a href="#prodotti">Prodotti</a><a href="#risultati">Risultati</a><a href="#contatti">Contatti</a></nav>
   <a class="header-contact" href="mailto:fidfellow@outlook.it">Scrivici</a>
-  <button class="menu" type="button" aria-label="Apri menu"><span></span><span></span></button>
+  <button class="menu" aria-expanded="false" aria-controls="mobile-menu" type="button" aria-label="Apri menu"><span></span><span></span></button>
 </header>
-<aside aria-hidden="true"><button class="close" type="button" aria-label="Chiudi menu">×</button><img src="assets/fidfellow-mark.webp" alt=""><a href="#home">Home</a><a href="#chi-siamo">Chi siamo</a><a href="#metodo">Metodo</a><a href="#prodotti">Prodotti</a><a href="#risultati">Risultati</a><a href="#contatti">Contatti</a></aside>
+<aside id="mobile-menu" aria-hidden="true" inert><button class="close" type="button" aria-label="Chiudi menu">×</button><img src="assets/fidfellow-mark.webp" alt=""><a href="#home">Home</a><a href="#chi-siamo">Chi siamo</a><a href="#metodo">Metodo</a><a href="#prodotti">Prodotti</a><a href="#risultati">Risultati</a><a href="#contatti">Contatti</a></aside>
 
 <main>
-  <section id="home" class="hero page-active" data-mobile-page="home">
-    <div class="hero-logo"><img src="assets/fidfellow-mark.webp" alt="Simbolo FidFellow"><img src="assets/fidfellow-wordmark.webp" alt="FidFellow"><p>BUILDING DIGITAL VENTURES</p></div>
-    <div class="hero-content"><p class="section-label">VENTURE STUDIO & AI OPERATIONS</p><h1>Costruiamo aziende digitali.<br><span>Automatizziamo processi reali.</span></h1><p>FidFellow crea prodotti proprietari partendo da opportunità individuate internamente. Per le imprese realizza automazioni AI e sistemi di digitalizzazione operativa.</p><div class="hero-actions"><a class="button gold" href="#prodotti">Scopri i prodotti</a><a class="button outline" href="#contatti">Parlaci di un processo</a></div><div class="hero-services"><span>Prodotti proprietari</span><span>Automazioni AI</span><span>Processi digitali</span></div></div>
+  <section id="home" class="hero" aria-label="FidFellow, il prossimo orizzonte digitale">
+    <div class="hero-stage">
+      <div class="atmosphere" aria-hidden="true"><div class="light-beam"></div><div class="horizon"></div><div class="orbital orbital-one"></div><div class="orbital orbital-two"></div><div class="planet"></div><div class="portal"><div class="portal-edge"></div></div></div>
+      <div class="hero-topline"><span>INDIPENDENT DIGITAL VENTURE STUDIO</span><span>IDEAS → REALITY</span></div>
+      <div class="hero-content"><p class="section-label">IL PROSSIMO ORIZZONTE</p><h1>Il futuro prende<br><em>forma.</em></h1><p>Prodotti digitali. Automazioni AI.<br>Portiamo le idee nel mondo reale.</p><div class="hero-actions"><a class="button gold" href="#prodotti">Esplora i nostri prodotti <span>↗</span></a><a class="hero-secondary" href="#contatti">Parliamone ↗</a></div></div>
+      <div class="portal-caption" aria-hidden="true"><span>F / F</span><small>BUILDING WHAT’S NEXT</small></div>
+      <div class="hero-bottom"><a href="#chi-siamo">SCORRI PER ESPLORARE <span>↓</span></a><span>PRODOTTI PROPRIETARI · AI · PROCESSI DIGITALI</span><span>01 — 06</span></div>
+    </div>
   </section>
 
   <section class="activities page-active" data-mobile-page="home" aria-label="Le attività di FidFellow">
@@ -50,7 +57,7 @@
   </section>
 
   <section id="prodotti" class="products" data-mobile-page="prodotti">
-    <div class="products-heading"><p class="section-label">I NOSTRI PRODOTTI</p><h2>La prova di ciò che costruiamo.</h2><p>Presentiamo soltanto progetti reali e informazioni che possiamo confermare.</p></div>
+    <div class="products-heading"><p class="section-label">I NOSTRI PRODOTTI</p><h2>La prova di ciò che costruiamo.</h2><p>Tre progetti, una visione: rendere più semplice il lavoro di ogni giorno.</p></div>
     <div class="product-switcher" role="tablist" aria-label="Seleziona un prodotto"><button class="active" type="button" role="tab" aria-selected="true" data-product-target="nuvia">Nuvia</button><button type="button" role="tab" aria-selected="false" data-product-target="flusso">Flusso</button><button type="button" role="tab" aria-selected="false" data-product-target="hotey">Hotey</button></div>
     <article class="product-card product-active" data-product="nuvia">
       <div class="product-logo"><img src="assets/nuvia-logo.webp" alt="Logo Nuvia"></div>
@@ -84,6 +91,6 @@
 </main>
 
 <footer><div class="footer-logo"><img src="assets/fidfellow-mark.webp" alt=""><img src="assets/fidfellow-wordmark.webp" alt="FidFellow"></div><div><a href="#home">Torna su ↑</a><span>© 2026 FidFellow</span></div></footer>
-<script src="script.js?v=20260902-5"></script>
+<script src="script.js?v=20260908-1"></script>
 </body>
 </html>
